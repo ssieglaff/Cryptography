@@ -1,8 +1,8 @@
 # This script performs a basic affine cipher.
 
-inputtext = "eujpe hunkl npojk vnksj fktbo lchbu pbomm npkbk hpbom bmahu pnkln pojkv nksjf krjtc jukpb omsje hp"
-a = 21
-b = 1
+inputtext = "FHHJJFSIVQQMKMBCBZXCQMKMXU"
+a = 4
+b = 16
 modulo = 26
 encrypt = -1 # change to -1 to decrypt
 

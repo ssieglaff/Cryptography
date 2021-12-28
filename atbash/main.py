@@ -1,6 +1,6 @@
 # This is python code to compute the atbash cypher of a string.
 
-plaintext = "message goes here"
+plaintext = "FHHJJFSIVQQMKMBCBZXCQMKMXU"
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 ciphertext = ""
 i = 0

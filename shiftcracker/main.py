@@ -1,6 +1,6 @@
 # This script attempts to crack a shift cipher via frequency analysis
 
-plaintext = "egdhe tgxin xhcdi lxiwd jibpc nutpg hpcss xhiph ithpc spskt ghxin xhcdi lxiwd jirdb udgih pcswd eth"
+plaintext = "FHHJJFSIVQQMKMBCBZXCQMKMXU"
 plaintext = plaintext.lower()
 
 alphabet = [0] * 26

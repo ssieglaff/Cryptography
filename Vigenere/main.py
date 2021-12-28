@@ -1,28 +1,14 @@
 # This is python code to compute the Vigenere cypher.
+import re
 
-plaintext = "walterraleighbringstobaccotoenglandfromamerica"
-primingkey = "b"
-# change to -1 to decrypt
-encrypt = 1
+inputtext = "FHHJJFSIVQQMKMBCBZXCQMKMXU"
+key = ""
+encrypt = -1 # 1 to encrypt, -1 to decrypt
 
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-ciphertext = ""
-i = 0
-if encrypt == 1:
-    key = primingkey + plaintext
-    for x in range(len(plaintext)):
-        pt = alphabet.find(plaintext[x])
-        ky = alphabet.find(key[x])
-        ciphertext += alphabet[(pt + ky) % 26]
-        i += 1
-else:
-    key = primingkey
-    for x in range(len(plaintext)):
-        a = alphabet.find(plaintext[x])
-        b = alphabet.find(key[x])
-        c = alphabet[(a - b) % 26]
-        ciphertext += c
-        key += c
-        i += 1
-print(ciphertext)
+outputtext = ""
+inputtext = re.compile('[^a-z]').sub('', inputtext.lower())
+for i in range(len(inputtext)):
+    outputtext += alphabet[(alphabet.find(inputtext[i]) + encrypt * alphabet.find(key[i % len(key)])) % len(alphabet)]
+print(outputtext)

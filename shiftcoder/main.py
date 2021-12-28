@@ -1,12 +1,12 @@
 # This is code to implement shift cipher encryption and decryption
 
-plaintext = "bzcm ewzbp qa qv jmqvo vwb ammuqvo"
-key = 2 # Number of letters to shift
+plaintext = "Cryptography"
+key = 13 # Number of letters to shift
 encrypt = -1 # Change to -1 to decrypt
 
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 ciphertext = ""
-
+plaintext = plaintext.lower()
 for x in plaintext:
     if x.isalpha():
         ciphertext += alphabet[(alphabet.find(x) + (encrypt * key)) % 26]
